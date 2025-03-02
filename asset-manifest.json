@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/frontend-app/static/css/main.af231295.css",
-    "main.js": "/frontend-app/static/js/main.f7c65117.js",
-    "index.html": "/frontend-app/index.html",
-    "main.af231295.css.map": "/frontend-app/static/css/main.af231295.css.map",
-    "main.f7c65117.js.map": "/frontend-app/static/js/main.f7c65117.js.map"
+    "main.css": "/Luchkovski/static/css/main.af231295.css",
+    "main.js": "/Luchkovski/static/js/main.f7c65117.js",
+    "index.html": "/Luchkovski/index.html",
+    "main.af231295.css.map": "/Luchkovski/static/css/main.af231295.css.map",
+    "main.f7c65117.js.map": "/Luchkovski/static/js/main.f7c65117.js.map"
   },
   "entrypoints": [
     "static/css/main.af231295.css",
