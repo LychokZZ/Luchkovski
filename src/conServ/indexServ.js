@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = `axios.post('https://whispering-falls-49383-3a4b7c43fb49.herokuapp.com/auth/`
+export const API_URL = `https://server-u62u.onrender.com/auth`
 
 const $api = axios.create({
     withCredentials:true,

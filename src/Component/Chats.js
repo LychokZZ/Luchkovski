@@ -52,14 +52,17 @@ const Chats = () =>{
                     </div>
                     
                 </div>
-                {Contacts.map((contact, index) => (
-                    <div key={index}>
-                        <button className='contacts' onClick={()=>openChat(contact)}>
-                            <div key={index}>{contact}</div>
-                        </button>
-                        <hr className='hr-line'></hr>
-                    </div>
-                ))}
+                {Array.isArray(Contacts) && Contacts.length > 0 ? 
+                    Contacts.map((contact, index) => (
+                        <div key={index}>
+                            <button className='contacts' onClick={() => openChat(contact)}>
+                                <div>{contact}</div>
+                            </button>
+                            <hr className='hr-line' />
+                        </div>
+                    ))
+                    : <div>Нема контактів</div>
+                }
                 
                 
             </div>
