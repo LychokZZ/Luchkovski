@@ -11,7 +11,7 @@ const Login =() =>{
         setTimeout(()=>{
             const Auth = JSON.parse(localStorage.getItem("MessageAuth"))
             if(Auth === true){
-                window.location.reload();
+                window.location.href ="/Luchkovski/"
 
             }else alert("Не вдалось!")
         },1000)

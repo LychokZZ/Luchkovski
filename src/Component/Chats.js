@@ -52,7 +52,7 @@ const Chats = () =>{
     const Logout = () =>{
         localStorage.setItem("MessageAuth", JSON.stringify(false))
         localStorage.setItem("User", JSON.stringify(''))
-        window.location.reload();
+        window.location.href ="/Luchkovski/"
 
     }
     return(
