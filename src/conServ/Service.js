@@ -4,7 +4,6 @@ export default class serviceAuth {
     static async login( username, password){
         return $api.post('/login ', {username,password}) 
     }
-
     static async register( username, password, email){
         return $api.post('/registration ', {username,password, email}) 
     }

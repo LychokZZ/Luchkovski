@@ -16,16 +16,28 @@ export default class Store{
     }
     async register(username,password,email){
         try{
-            const response = await serviceAuth.register(username,password,email)
+            const response = await serviceAuth.register(username,password)
             console.log("response " + response)
-            localStorage.setItem("Auth", JSON.stringify(true))
-            localStorage.setItem("Userauth", JSON.stringify(username))
+            localStorage.setItem("MessageAuth", JSON.stringify(true))
+            localStorage.setItem("User", JSON.stringify(username))
             this.setAuth(true)
             this.setUser(response.data.user)
         }catch(e){
             console.log(e)
         }
     }
+    
+    async Login(username,password){
+        try{
+            const response = await serviceAuth.login(username,password)
+            console.log("response " + response)
+            localStorage.setItem("MessageAuth" , true )
+            localStorage.setItem("User", JSON.stringify(username));
+        }catch(e){
+            console.log(e)
+        }
+    }
+
     async sendMessage(user1,user2,text){
         console.log(user1,user2,text)
         try{

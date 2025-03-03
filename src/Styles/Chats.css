@@ -35,14 +35,14 @@
     background-color: #5970a4;
     transform: scale(1.05)
 }
-.input{
+.input-seach{
     display: flex;
     align-items: center;
     background-color: #2d323b;
     border: none;
-    
     border-radius: 10px;
-    height: 3vh;
+    margin: 6px 0px;
+    height: 3vw;
     width: 30vh;
     padding: 5px;
     font-size: large ;
@@ -92,7 +92,7 @@ input:focus {
     align-items: end;
     flex-direction: column-reverse;
     width:50vh;
-    margin: 10px 60%;
+    margin: 10px 49vw;
     padding: 10px;
     font-size: 15px;
     border-radius: 10px;
@@ -144,7 +144,7 @@ input:focus {
 .SendsAvatar{
     width: 25px;
     height: 25px;
-    margin: 0px 4% 0px 0px;
+    margin: 0px 8% 0px 0px;
     transition: transform .1s;
     transform: rotate(-45deg);
 
