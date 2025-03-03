@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Luchkovski/static/css/main.af231295.css",
+    "main.css": "/Luchkovski/static/css/main.f8530f23.css",
     "main.js": "/Luchkovski/static/js/main.3dd1f39d.js",
     "index.html": "/Luchkovski/index.html",
-    "main.af231295.css.map": "/Luchkovski/static/css/main.af231295.css.map",
+    "main.f8530f23.css.map": "/Luchkovski/static/css/main.f8530f23.css.map",
     "main.3dd1f39d.js.map": "/Luchkovski/static/js/main.3dd1f39d.js.map"
   },
   "entrypoints": [
-    "static/css/main.af231295.css",
+    "static/css/main.f8530f23.css",
     "static/js/main.3dd1f39d.js"
   ]
 }
