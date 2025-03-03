@@ -11,7 +11,8 @@ const Login =() =>{
         setTimeout(()=>{
             const Auth = JSON.parse(localStorage.getItem("MessageAuth"))
             if(Auth === true){
-                window.location.href ="/"
+                window.location.reload();
+
             }else alert("Не вдалось!")
         },1000)
     }
