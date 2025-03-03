@@ -38,7 +38,7 @@ const Chats = () =>{
         setTimeout(()=>{
             setReciver(user)
             setChat(<VueChats user2 = {user} />)
-        },100)
+        },1)
     }
     const openChat = (user)=>{
         setchatWith(<Heder user2={user}/>)
