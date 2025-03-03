@@ -9,6 +9,8 @@ const VueChats = ({ user2 }) => {
     const blockRef = useRef(null);
     const containerRef = useRef(null);
 
+    const [lastChatLength, setLastChatLength] = useState(0);
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -22,8 +24,11 @@ const VueChats = ({ user2 }) => {
     });
 
     useEffect(() => {
-        scrollToBottom();
-    }, [Chat]); // Прокручуємо вниз після оновлення чату
+        if (Chat.length > lastChatLength) {
+            scrollToBottom(); 
+            setLastChatLength(Chat.length); 
+        }
+    },[Chat]);
 
     const scrollToBottom = () => {
         if (containerRef.current) {

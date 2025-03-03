@@ -15,6 +15,7 @@ const Chats = () =>{
     const [reciver,setReciver] = useState('')
     const [chat,setChat] = useState('')
     const [chatWith, setchatWith] = useState('')
+    const [Accept, setAcceps] = useState('')
     useEffect(() => {
         async function fetchData() {
             try {
@@ -40,6 +41,13 @@ const Chats = () =>{
             setChat(<VueChats user2 = {user} />)
         },0)
     }
+    const Seaching=()=>{
+        setchatWith(<Heder user2={Accept}/>)
+        console.log(Accept)
+        setChat('')
+        chats(Accept)
+    }
+
     const openChat = (user)=>{
         setchatWith(<Heder user2={user}/>)
         setChat('')
@@ -59,25 +67,29 @@ const Chats = () =>{
        <div className='App'>
             <div className='contacts-conteiner'>
                 <div className='input-block'>
-                    <h3>Чати</h3>
-                    <button onClick={()=>Logout()}>Logout</button>
+                    <div className='FlexchatLog'>
+                        <h3>Чати</h3>
+                        <button onClick={()=>Logout()} className='Logout'>Logout</button>
+                    </div>
                     <div className='input-seach'>
-                        <HiMagnifyingGlass />
-                        <input  className='input2' placeholder='Пошук'></input>
+                        <input onChange={(e)=>setAcceps(e.target.value)}   className='input2' placeholder='Пошук'></input>
+                        <button onClick={()=>Seaching()} className='SeachBut'><HiMagnifyingGlass /></button>
                     </div>
                     
                 </div>
-                {Array.isArray(Contacts) && Contacts.length > 0 ? 
-                    Contacts.map((contact, index) => (
-                        <div key={index}>
-                            <button className='contacts' onClick={() => openChat(contact)}>
-                                <div>{contact}</div>
-                            </button>
-                            <hr className='hr-line' />
-                        </div>
-                    ))
-                    : <div>Нема контактів</div>
-                }
+                <div className='ListContainer'>
+                    {Array.isArray(Contacts) && Contacts.length > 0 ? 
+                        Contacts.map((contact, index) => (
+                            <div key={index}>
+                                <button className='contacts' onClick={() => openChat(contact)}>
+                                    <div>{contact}</div>
+                                </button>
+                                <hr className='hr-line' />
+                            </div>
+                        ))
+                        : <div>Нема контактів</div>
+                    }
+                </div>
                 
                 
             </div>
