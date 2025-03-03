@@ -8,6 +8,7 @@ import { IoSend } from "react-icons/io5";
 
 const Chats = () =>{
     const inputRef = useRef(null);
+    const [pep,setPep] = useState('')
     const [Contacts, setContacts] = useState([])
     const {store} = useContext(Context);
     const User =  JSON.parse(localStorage.getItem('User'));
@@ -41,13 +42,16 @@ const Chats = () =>{
         store.sendMessage(User,reciver,text);
         inputRef.current.value = "";
     }
+    localStorage.setItem("User", JSON.stringify(pep));
     return(
        <div className='App'>
             <div className='contacts-conteiner'>
                 <div className='input-block'>
                     <h3>Чати</h3>
+                    <input  className='input2' placeholder='Твій нік брат' onChange={(e)=>setPep(e.target.value)}></input>
                     <div className='input'>
                         <HiMagnifyingGlass />
+                        
                         <input  className='input2' placeholder='Пошук'></input>
                     </div>
                     

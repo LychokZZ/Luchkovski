@@ -3,7 +3,6 @@ import './Styles/App.css';
 import Chats from './Component/Chats';
 
 function App() {
-  localStorage.setItem("User", JSON.stringify("Luchik"));
   return (
     <div className="App">
       <div className="App-header">
